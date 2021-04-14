@@ -1,0 +1,232 @@
+// Variables
+
+$primary-color: #474747;
+$accent-color: #c40a30;
+$secondary-color: lightgray;
+$text-color: #eeee;
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+$font-stack: "Metrophobic', sans-serif";
+
+// Reset
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// Properties
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: $primary-color;
+    color: $text-color;
+    font-weight: map-get($font-weights, regular);
+    // font-family: $font-stack;
+    font-family: 'Metrophobic', sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: $secondary-color;
+
+    span {
+        color:$accent-color;
+    }
+    // padding: 1rem;
+    // border-bottom: solid 2px $accent-color;
+}
+
+h2 {
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+    color: $accent-color;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    #image {
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+        position: absolute;
+        top: 0px;
+        z-index: -10;
+    }
+    
+    #title, #subtitle, #quote, #img-caption {
+        padding-left: 2rem;
+    }
+
+    #title {
+        font-size: 4rem;
+        padding-top: 1rem;
+    }
+
+    #quote {
+        font-size: 1.5rem;
+        color:$secondary-color;
+        width: 40%;
+    }
+
+    #img-caption {
+        // position: absolute;
+        // bottom: 3rem;
+        padding-bottom: 4rem;
+    }
+
+    .next-section-button{
+        position: absolute;
+        left: 2rem;
+        bottom: 2vh;
+        width: 10.5rem;
+        padding: 2px 2px 2px 8px;
+    
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: $accent-color;
+        background-color: $secondary-color;
+    
+        display: flex;
+    
+        span {
+            padding-left: 1rem;
+            animation: arrow-slide 1.5s infinite;
+        }
+    }
+
+}
+main {
+    #section-biography{
+        min-height: 100vh;
+        background-color: $secondary-color;
+        padding-top: 2rem;
+        h2 {
+            color: $accent-color;
+
+        }
+        article {
+            color: black;
+        }
+
+        #section-wrapper {
+            width: 80vw;  
+            padding: 2rem 2rem 2rem 2rem;
+            margin: 0 10vw 0 10vw;
+            border: solid $accent-color 1px;
+            border-bottom: solid $accent-color 1px;
+        }   
+
+        .next-section-button{
+            position: relative;
+            // left: calc(10vw + 2rem);
+            top: 1rem;
+            width: 10rem;
+            padding: 2px 1rem 2px 8px;
+        
+            font-size: 1.2rem;
+            text-decoration: none;
+            background-color: $accent-color;
+            color: $secondary-color;
+        
+            display: flex;
+        
+            .next-arrow {
+                animation: arrow-slide 1.5s infinite;
+            }
+        }
+    }
+
+    @keyframes arrow-slide {
+        0% {
+            padding-left:0rem;
+        }
+
+        100% {
+            padding-left: 1rem;
+        }
+    }
+
+    #section-bibliography {
+        background-color: $secondary-color;
+
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+        
+        #section-wrapper {
+            width: 80vw;  
+            padding: 2rem 2rem 2rem 2rem;
+            margin: 0 10vw 0 10vw;
+            border: solid $accent-color 1px;
+            border-bottom: solid $accent-color 1px;
+        }  
+
+        h2 {
+            padding-bottom: 1rem;
+
+        }
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+            padding-left: 0;
+        }
+    
+        li {
+            list-style: none;
+            // border: solid red 1px;
+            color: black;
+            display: flex;
+            align-items: center;
+        }
+    
+        .book-illustration {
+            height: 240px;
+            width: 180px;
+            object-fit: fill;
+        }
+
+        .book-information {
+            margin-left: 0.5rem;
+        }
+
+        .book-release-year {
+            color: $primary-color;
+            font-size: 1.25rem;
+        }
+            
+    }
+    
+    #section-footer {
+        background-color: black;
+        padding: 2rem 10vw 2rem 10vw;
+
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            color:$secondary-color;
+            background-color: $primary-color;
+        }
+
+        a:hover {
+            background-color: $primary-color;
+        }
+
+        a:active {
+            color:$secondary-color;
+        }
+    }
+}

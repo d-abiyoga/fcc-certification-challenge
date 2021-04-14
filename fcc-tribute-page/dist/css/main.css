@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #474747;
+  color: #eeee;
+  font-weight: 400;
+  font-family: 'Metrophobic', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h1 {
+  color: lightgray;
+}
+
+h1 span {
+  color: #c40a30;
+}
+
+h2 {
+  font-size: 2rem;
+  padding-bottom: 1.5rem;
+  color: #c40a30;
+}
+
+header {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header #image {
+  height: 100vh;
+  width: 100vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0px;
+  z-index: -10;
+}
+
+header #title, header #subtitle, header #quote, header #img-caption {
+  padding-left: 2rem;
+}
+
+header #title {
+  font-size: 4rem;
+  padding-top: 1rem;
+}
+
+header #quote {
+  font-size: 1.5rem;
+  color: lightgray;
+  width: 40%;
+}
+
+header #img-caption {
+  padding-bottom: 4rem;
+}
+
+header .next-section-button {
+  position: absolute;
+  left: 2rem;
+  bottom: 2vh;
+  width: 10.5rem;
+  padding: 2px 2px 2px 8px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #c40a30;
+  background-color: lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .next-section-button span {
+  padding-left: 1rem;
+  -webkit-animation: arrow-slide 1.5s infinite;
+          animation: arrow-slide 1.5s infinite;
+}
+
+main #section-biography {
+  min-height: 100vh;
+  background-color: lightgray;
+  padding-top: 2rem;
+}
+
+main #section-biography h2 {
+  color: #c40a30;
+}
+
+main #section-biography article {
+  color: black;
+}
+
+main #section-biography #section-wrapper {
+  width: 80vw;
+  padding: 2rem 2rem 2rem 2rem;
+  margin: 0 10vw 0 10vw;
+  border: solid #c40a30 1px;
+  border-bottom: solid #c40a30 1px;
+}
+
+main #section-biography .next-section-button {
+  position: relative;
+  top: 1rem;
+  width: 10rem;
+  padding: 2px 1rem 2px 8px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  background-color: #c40a30;
+  color: lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main #section-biography .next-section-button .next-arrow {
+  -webkit-animation: arrow-slide 1.5s infinite;
+          animation: arrow-slide 1.5s infinite;
+}
+
+@-webkit-keyframes arrow-slide {
+  0% {
+    padding-left: 0rem;
+  }
+  100% {
+    padding-left: 1rem;
+  }
+}
+
+@keyframes arrow-slide {
+  0% {
+    padding-left: 0rem;
+  }
+  100% {
+    padding-left: 1rem;
+  }
+}
+
+main #section-bibliography {
+  background-color: lightgray;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+main #section-bibliography #section-wrapper {
+  width: 80vw;
+  padding: 2rem 2rem 2rem 2rem;
+  margin: 0 10vw 0 10vw;
+  border: solid #c40a30 1px;
+  border-bottom: solid #c40a30 1px;
+}
+
+main #section-bibliography h2 {
+  padding-bottom: 1rem;
+}
+
+main #section-bibliography ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  padding-left: 0;
+}
+
+main #section-bibliography li {
+  list-style: none;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #section-bibliography .book-illustration {
+  height: 240px;
+  width: 180px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+main #section-bibliography .book-information {
+  margin-left: 0.5rem;
+}
+
+main #section-bibliography .book-release-year {
+  color: #474747;
+  font-size: 1.25rem;
+}
+
+main #section-footer {
+  background-color: black;
+  padding: 2rem 10vw 2rem 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #section-footer a {
+  color: lightgray;
+  background-color: #474747;
+}
+
+main #section-footer a:hover {
+  background-color: #474747;
+}
+
+main #section-footer a:active {
+  color: lightgray;
+}
+/*# sourceMappingURL=main.css.map */
