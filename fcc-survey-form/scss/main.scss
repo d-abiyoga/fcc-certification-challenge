@@ -1,0 +1,129 @@
+$main-color: #BD948F;
+$secondary-color: #B36060;
+$accent-color: #8EB6DE;
+$accent-color2: #BF4143;
+$font-color: #D6CCC2;
+$font-color2: #5C5555;
+$main-font: sans-serif;
+
+// CSS RESET
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $main-color;
+    font-family: $main-font;
+}
+
+.container {
+    margin: 0 auto;
+    width: 90vw;
+
+}
+
+@media screen and (min-width: 880px) {
+    .container {
+        width: 800px;
+    }
+}
+
+header {
+
+    text-align: center;
+
+    h1 {
+        padding: 1rem 1rem 0.2rem 1rem;
+        font-size: 2rem;
+        color: $font-color
+    }
+
+    p {
+        padding-bottom: 1rem;
+        color: $font-color2;
+
+    }
+}
+
+form {
+    background-color: $secondary-color;
+    color: $font-color;
+
+    // Form outline
+    padding: 1em;
+    border: 1px solid $accent-color;
+    border-radius: 0.75em;
+
+    label {
+        // display: inline-block;
+        display: flex;
+        align-items: center;
+        // margin-bottom: 0.5rem;
+        width: 100%;
+    }
+
+   .form-control {
+        font: $main-font;
+        padding-left: 0.5rem;
+        // Uniform text field size
+        // width: 300px;
+    }
+    #name, #email, #number, #dropdown, #favorite-source {
+        width: 100%;
+        height: 1.5rem;
+    }
+
+    // WHY IT IS NOT WORKING?
+    .form-control:focus {
+        border-color: $secondary-color;
+    }
+
+    .form-group {
+        padding-bottom: 1rem;
+    }
+
+    .clue {
+    font-size: 0.9rem;
+    color: #a7a7a7;
+    margin-left: 0.2rem;
+    }
+
+    fieldset {
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-bottom: 0.2rem;
+    }
+
+    .input-radio, .input-checkbox {
+        margin-right: 0.5rem;
+    }
+
+    textarea {
+        vertical-align: top;
+        width: 100%;
+        height: 5rem;
+        padding-left: .5rem;
+    }
+
+    button {
+        // margin-left: .5rem;
+        border: none;
+        width: 100%;
+        padding: 0.5rem;
+        background-color: $accent-color;
+        color: $secondary-color;
+        font-weight: bolder;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    button:hover {
+        border: $accent-color solid 1px;
+    }
+}
