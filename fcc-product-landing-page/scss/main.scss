@@ -1,0 +1,212 @@
+/* VARIABLES */
+$main-color: #5D3D32;
+$secondary-color: #E3F2FD;
+$tertiary-color: #6F7D8C;
+// $accent-color: #E3A587;
+$accent-color: #c2a376; 
+$accent-color2: #3A3042;
+$font-stack: 'Open Sans', sans-serif;
+
+/* CSS RESET */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $font-stack;
+    scroll-behavior: smooth;
+}
+
+header {
+    #nav-bar {
+        position: fixed;
+        width: 100%;
+        background-color: $accent-color;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 12.5rem;
+        }
+
+        li {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+            color:$main-color;
+            position:relative;
+            
+        }
+        
+        a::before {
+            content: '';
+            display: block;
+            height: 3px;
+            background: $main-color;
+            position: absolute;
+            bottom: -0.3em;
+            left: 0;
+            right: 0;
+            transform: scale(0, 1);
+            transition: transform ease-in-out 250ms;
+        }
+
+        a:hover::before {
+            transform: scale(1,1);
+          }
+
+        .img-div {
+            width: 32px;
+        }
+
+        #logo-img {
+            width: 100%;
+        }
+
+        
+    }
+}
+
+main {
+    #hero {
+        // background-image: url(/img/hero-img.jpg);
+        background-image: url(https://images.unsplash.com/photo-1589646100822-58184c0513fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80);
+        background-image: url(/img/bg-joe-coffee.jpg);
+        background-repeat: repeat;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            // padding-top: 50vh;
+            padding-left: 1rem;
+            color: $main-color;
+
+        }
+
+        p {
+            padding-left: 1rem;
+        }
+
+        .accent {
+            position: relative;
+            z-index: 1;
+        }
+        .accent::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0.25em;
+            height: 0.5rem;
+            background: $accent-color;
+            z-index: -1;
+        }
+    }
+
+    background-color: $secondary-color;
+
+    #features {
+        padding: 3rem 1rem 1rem;
+    
+        .feature-wrapper {
+            padding: 1rem 0rem;
+        }
+    }
+
+    #how-it-works {
+        padding: 2rem 1rem 1rem;
+        background-color: $tertiary-color;
+    }
+
+    #pricing {
+        padding: 2rem;
+        text-align: center;
+
+        h2 {
+            padding-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .pricing-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // width: 100vw;
+            
+
+        }
+
+        .price-plan {
+            border: 1px solid $main-color;
+            border-radius: 0.5rem;
+            text-align: center;
+            width: 70%;
+            margin-bottom: 1rem;
+            overflow: clip;
+            background-color: rgba($accent-color,0.7);
+
+
+            h3 {
+                background-color: $main-color;
+                color: $secondary-color;
+                display: block;
+                height: 2rem;
+                font-size: 1.1rem;
+            }
+
+            p {
+                font-weight: bold;
+                background-color: $accent-color;
+            }
+
+            li {
+                list-style: none;
+                font-size: 0.8rem;
+            }
+        
+
+
+
+        }
+
+        @media screen and (min-width: 500px) {
+            .pricing-wrapper {
+                flex-direction: row;
+            }
+
+            .price-plan {
+                width: 30%;
+                height: 10rem;
+            }
+        }
+
+
+    }
+}
+
+@media screen and (min-width: 800px) {
+    main {
+        #hero {
+            background-image: url(https://images.unsplash.com/photo-1589646100822-58184c0513fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80);
+        }
+    }
+}
+
+footer {
+    background-color: $accent-color2;
+    color: $main-color;
+}
