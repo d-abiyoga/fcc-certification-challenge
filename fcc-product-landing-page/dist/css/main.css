@@ -12,6 +12,12 @@ html {
   scroll-behavior: smooth;
 }
 
+h2 {
+  padding: 1rem 0rem;
+  font-size: 1.6rem;
+  color: #476A6F;
+}
+
 header #nav-bar {
   position: fixed;
   width: 100%;
@@ -74,12 +80,12 @@ header #nav-bar .img-div {
   width: 32px;
 }
 
-header #nav-bar #logo-img {
+header #nav-bar #header-img {
   width: 100%;
 }
 
 main {
-  background-color: #E3F2FD;
+  background-color: #FCE0B6;
 }
 
 main #hero {
@@ -128,25 +134,63 @@ main #hero .accent::before {
 
 main #features {
   padding: 3rem 1rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #5D3D32;
+  text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+  main #features {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main #features .feature-wrapper {
+    width: 30vw;
+    text-align: center;
+  }
 }
 
 main #features .feature-wrapper {
   padding: 1rem 0rem;
 }
 
-main #how-it-works {
-  padding: 2rem 1rem 1rem;
-  background-color: #6F7D8C;
+main #features .material-icons {
+  font-size: 80px;
+  color: #5D3D32;
 }
 
-main #pricing {
-  padding: 2rem;
+main #features .feature-descrtiption {
+  color: rgba(93, 61, 50, 0.5);
+}
+
+main #media {
+  padding: 2rem 1rem 1rem;
+  background-color: #FCE0B6;
+  color: #5D3D32;
   text-align: center;
 }
 
-main #pricing h2 {
-  padding-bottom: 1rem;
-  font-size: 1.3rem;
+main #media p {
+  padding-bottom: 0.5rem;
+}
+
+main #pricing {
+  padding: 1rem;
+  text-align: center;
 }
 
 main #pricing .pricing-wrapper {
@@ -167,14 +211,25 @@ main #pricing .price-plan {
   border-radius: 0.5rem;
   text-align: center;
   width: 70%;
+  min-height: 6rem;
   margin-bottom: 1rem;
   overflow: clip;
   background-color: rgba(194, 163, 118, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 main #pricing .price-plan h3 {
   background-color: #5D3D32;
-  color: #E3F2FD;
+  color: #FCE0B6;
   display: block;
   height: 2rem;
   font-size: 1.1rem;
@@ -186,7 +241,8 @@ main #pricing .price-plan p {
 }
 
 main #pricing .price-plan li {
-  list-style: none;
+  text-align: left;
+  margin-left: 1rem;
   font-size: 0.8rem;
 }
 
@@ -196,6 +252,9 @@ main #pricing .price-plan li {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   main #pricing .price-plan {
     width: 30%;
@@ -209,8 +268,36 @@ main #pricing .price-plan li {
   }
 }
 
+#subscription {
+  padding: 1rem;
+  text-align: center;
+}
+
+#subscription input {
+  width: 12rem;
+  height: 1.5rem;
+}
+
+#subscription button {
+  padding: 0.25rem;
+  color: #FCE0B6;
+  background-color: #476A6F;
+}
+
 footer {
   background-color: #3A3042;
-  color: #5D3D32;
+  color: #FCE0B6;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+footer .material-icons {
+  color: #c2a376;
+  padding-left: 0.5rem;
 }
 /*# sourceMappingURL=main.css.map */

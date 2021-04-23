@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font Import-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <!-- Icon Import -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <!-- Style -->
     <link rel="stylesheet" href="./css/main.css">
     <title>FCC Product Landing Page</title>
@@ -16,11 +19,11 @@
     <header id="header">
         <nav id="nav-bar">
             <div class="img-div">
-                <img id="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Coffee_cup_flat.svg/1024px-Coffee_cup_flat.svg.png" alt="" id="header-img">
+                <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Coffee_cup_flat.svg/1024px-Coffee_cup_flat.svg.png" alt="" id="header-img">
             </div>
             <ul>
                 <li><a href="#features" class="nav-link">Features</a></li>
-                <li><a href="#how-it-works" class="nav-link">Why</a></li>
+                <li><a href="#media" class="nav-link">Why</a></li>
                 <li><a href="#pricing" class="nav-link">Pricing</a></li>
             </ul>
         </nav>
@@ -35,24 +38,38 @@
         </section>
         <section id="features">
             <div class="feature-wrapper">
-                <div class="icon">ICON</div>
-                <h2 class="feature-name">Freshly Roasted</h2>
+                <div class="icon">
+                    <span class="material-icons">
+                        microwave
+                    </span>
+                </div>
+                <h3 class="feature-name">Fresh</h3>
                 <p class="feature-description">Delivered to your home just after roasted</p>
             </div>
             <div class="feature-wrapper">
-                <div class="icon">ICON</div>
-                <h2 class="feature-name">Curated by our Specialist</h2>
+                <div class="icon">
+                    <span class="material-icons">
+                        star_rate
+                    </span>
+                </div>
+                <h3 class="feature-name">Quality</h3>
                 <p class="feature-description">Only selected high quality coffee curated by our Q-grader</p>
             </div>
             <div class="feature-wrapper">
-                <div class="icon">ICON</div>
-                <h2 class="feature-name">Customize</h2>
-                <p class="feature-description">Customize the coffee selection just</p>
+                <div class="icon">
+                    <span class="material-icons">
+                        settings
+                    </span>
+                </div>
+                <h3 class="feature-name">Customize</h3>
+                <p class="feature-description">Customize the coffee selection just for your preference</p>
             </div>
         </section>
-        <section id="how-it-works">
-            <h2>Coffee Subscription</h2>
+        <section id="media">
+            <h2>We Believe in our Product</h2>
+            <p>You can see how our product compared to others..</p>
             <iframe 
+                id="video"
                 width="331" 
                 height="186" 
                 src="https://www.youtube.com/embed/77eVgXfdKPU" 
@@ -65,48 +82,68 @@
             <h2>Pick your subscription plan</h2>
             <div class="pricing-wrapper">
                 <div class="price-plan">
-                    <h3>1 Month</h3>
-                    <ul>
-                        <li>3 x 200g single origin beans monthly</li>
-                        <li>lorem</li>
-                        <li>lorem</li>
-                    </ul>
-                    <p>25$</p>
+                    <div>
+                        <h3>1 Month</h3>
+                        <ul>
+                            <li>3 x 200g single origin beans monthly</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>25$</p>
+                    </div>
                 </div>
                 <div class="price-plan">
-                    <h3>6 Month</h3>
-                    <ul>
-                        <li>3 x 200g single origin beans</li>
-                        <li>lorem</li>
-                        <li>lorem</li>
-                    </ul>
-                    <p>120$</p>
+                    <div>
+                        <h3>6 Month</h3>
+                        <ul>
+                            <li>3 x 200g single origin beans every month</li>
+                            <li>Free 50g houseblend</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>120$</p>
+                    </div>
                 </div>
                 <div class="price-plan">
-                    <h3>1 Year</h3>
-                    <ul>
-                        <li>lorem</li>
-                        <li>lorem</li>
-                        <li>lorem</li>
-                    </ul>
-                    <p>200$</p>
+                    <div>
+                        <h3>1 Year</h3>
+                        <ul>
+                            <li>3 x 200g single origin beans every month</li>
+                            <li>Free 50g houseblend</li>
+                            <li>Loyalty badge</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p>200$</p>
+                    </div>
                 </div>
             </div>
         </section>
         <section id="subscription">
             <form id="form" action="https://www.freecodecamp.com/email-submit">
-                <label for="email">Learn more about our product</label>
+                <label for="email">Tell us what your subscription plan</label>
                 <input 
                     type="email" 
                     id="email" 
                     name="email" 
                     placeholder="Enter your email address here...">
-                <button type="submit" id="submit">Submit</button>
+                <input type="submit" id="submit">Submit</input>
             </form>
         </section>
     </main>
     <footer>
-        THIS IS A FOOTER
+        <p>Reach us on </p>
+        
+        <a href="#" target="_blank" rel="noopener noreferrer">
+            <span class="material-icons">
+                facebook
+            </span>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+            <span class="material-icons">
+                email
+            </span>
+        </a>
     </footer>
 </body>
 </html>

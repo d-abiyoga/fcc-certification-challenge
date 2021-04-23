@@ -1,11 +1,13 @@
 /* VARIABLES */
 $main-color: #5D3D32;
-$secondary-color: #E3F2FD;
-$tertiary-color: #6F7D8C;
+$secondary-color: #FCE0B6;
+$tertiary-color: #476A6F;
 // $accent-color: #E3A587;
 $accent-color: #c2a376; 
 $accent-color2: #3A3042;
 $font-stack: 'Open Sans', sans-serif;
+
+$large-screen: 500px;
 
 /* CSS RESET */
 
@@ -19,6 +21,12 @@ $font-stack: 'Open Sans', sans-serif;
 html {
     font-family: $font-stack;
     scroll-behavior: smooth;
+}
+
+h2 {
+    padding: 1rem 0rem;
+    font-size: 1.6rem;
+    color:$tertiary-color;
 }
 
 header {
@@ -69,7 +77,7 @@ header {
             width: 32px;
         }
 
-        #logo-img {
+        #header-img {
             width: 100%;
         }
 
@@ -121,25 +129,54 @@ main {
 
     #features {
         padding: 3rem 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        color: $main-color;
+        text-align: center;
+
     
+        @media screen and (min-width: $large-screen) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .feature-wrapper {
+                width: 30vw;
+                text-align: center;
+            }
+        }
+        
         .feature-wrapper {
             padding: 1rem 0rem;
         }
+
+        .material-icons {
+            font-size: 80px;
+            color:$main-color;
+        }
+        
+        .feature-descrtiption {
+            color: rgba($main-color, 0.5);
+        }
+
     }
 
-    #how-it-works {
+    #media {
         padding: 2rem 1rem 1rem;
-        background-color: $tertiary-color;
+        background-color: $secondary-color;
+        color: $main-color;
+        text-align: center;
+        
+        p {
+            padding-bottom: 0.5rem;
+        }
+
+
     }
 
     #pricing {
-        padding: 2rem;
+        padding: 1rem;
         text-align: center;
-
-        h2 {
-            padding-bottom: 1rem;
-            font-size: 1.3rem;
-        }
         
         .pricing-wrapper {
             display: flex;
@@ -155,9 +192,14 @@ main {
             border-radius: 0.5rem;
             text-align: center;
             width: 70%;
+            min-height: 6rem;
             margin-bottom: 1rem;
             overflow: clip;
             background-color: rgba($accent-color,0.7);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
 
             h3 {
@@ -171,10 +213,13 @@ main {
             p {
                 font-weight: bold;
                 background-color: $accent-color;
+
             }
 
             li {
-                list-style: none;
+                // list-style: none;
+                text-align: left;
+                margin-left: 1rem;
                 font-size: 0.8rem;
             }
         
@@ -183,14 +228,16 @@ main {
 
         }
 
-        @media screen and (min-width: 500px) {
+        @media screen and (min-width: $large-screen) {
             .pricing-wrapper {
                 flex-direction: row;
+                justify-content: space-between;
             }
 
             .price-plan {
                 width: 30%;
                 height: 10rem;
+
             }
         }
 
@@ -206,7 +253,32 @@ main {
     }
 }
 
+#subscription {
+    padding: 1rem;
+    text-align: center;
+
+    input {
+        width: 12rem;
+        height: 1.5rem;
+    }
+
+    button {
+        padding: 0.25rem;
+        color:$secondary-color;
+        background-color: $tertiary-color;
+    }
+}
+
 footer {
     background-color: $accent-color2;
-    color: $main-color;
+    color: $secondary-color;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+
+
+    .material-icons {
+        color: $accent-color;
+        padding-left: 0.5rem;
+    }
 }
