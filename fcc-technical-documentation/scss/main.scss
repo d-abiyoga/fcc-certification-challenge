@@ -1,0 +1,99 @@
+// VARIABLES
+$main-color: #0E3B43;
+$secondary-color: #A3BBAD;
+$tertiary-color: #357266;
+$secondary-color2: #EA9E8D;
+
+// CSS RESET
+*, *:after, *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+// STYLING
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    //background-color: rgb(209, 226, 231);
+    background-color: $secondary-color;
+}
+
+#navbar {
+    background-color: $main-color;
+    color:#A3BBAD;
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+//    border-color: darkolivegreen;
+
+
+    header {
+        font-weight: bold;
+        font-size: 1.8rem;
+        padding: 1rem;
+    }
+    ul {
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 300px;
+        height: 100%;
+        
+    }
+
+    li {
+        padding-left: 1rem;
+        position: relative;
+        width: 100%;
+        
+//        border: white solid 2px;
+    }
+
+    li:hover {
+        background-color: $secondary-color;
+        color:$main-color;
+    }
+
+    a {
+        display: block;
+        padding: 1rem 0;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+    }
+    
+}
+
+#main-doc {
+    position: absolute;
+    margin-left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
+    line-height: 1.5;
+
+    section {
+        padding: 1rem 0;
+        border-bottom: solid 1px $main-color
+    }
+}
+
+code {
+    display: block;
+    text-align: left;
+    //white-space: pre-line;
+    //position: relative;
+    //word-break: normal;
+    //word-wrap: normal;
+    line-height: 2;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}

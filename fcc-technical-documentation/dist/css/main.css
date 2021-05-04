@@ -1,0 +1,82 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #A3BBAD;
+}
+
+#navbar {
+  background-color: #0E3B43;
+  color: #A3BBAD;
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+}
+
+#navbar header {
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+
+#navbar ul {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 300px;
+  height: 100%;
+}
+
+#navbar li {
+  padding-left: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+#navbar li:hover {
+  background-color: #A3BBAD;
+  color: #0E3B43;
+}
+
+#navbar a {
+  display: block;
+  padding: 1rem 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+  line-height: 1.5;
+}
+
+#main-doc section {
+  padding: 1rem 0;
+  border-bottom: solid 1px #0E3B43;
+}
+
+code {
+  display: block;
+  text-align: left;
+  line-height: 2;
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=main.css.map */
